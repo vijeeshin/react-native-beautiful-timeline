@@ -27,9 +27,7 @@ const PointLine: React.FC<PointLineProps> = ({
   return (
     <View style={styles.container}>
       <View style={styles.containerGlue}>
-        <Text style={[styles.dayTextStyle, dayTextStyle]}>
-          {step}
-        </Text>
+        <Text style={[styles.dayTextStyle, dayTextStyle]}>{step}</Text>
         {/*<Text style={[styles.monthTextStyle, monthTextStyle]}>
           {moment(date).format("ddd").toUpperCase()}
         </Text>*/}

@@ -30,7 +30,7 @@ const Item: React.FC<ItemProps> = ({
     <View style={[styles.container, style]}>
       <PointLine
         {...rest}
-        date={data.date}
+        step={data.date}
         length={list.length}
         isLastMember={isLastMember}
       />
