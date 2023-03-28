@@ -9,7 +9,7 @@ import styles, { _dashStyle } from "./PointLine.style";
 import Point from "./components/Point";
 
 interface PointLineProps {
-  date: number;
+  step: number;
   length: number;
   isLastMember: boolean;
   dayTextStyle?: StyleProp<TextStyle>;
@@ -17,7 +17,7 @@ interface PointLineProps {
 }
 
 const PointLine: React.FC<PointLineProps> = ({
-  date,
+  step,
   isLastMember,
   dayTextStyle,
   length,
@@ -28,11 +28,11 @@ const PointLine: React.FC<PointLineProps> = ({
     <View style={styles.container}>
       <View style={styles.containerGlue}>
         <Text style={[styles.dayTextStyle, dayTextStyle]}>
-          {moment(date).format("DD")}
+          {step}
         </Text>
-        <Text style={[styles.monthTextStyle, monthTextStyle]}>
+        {/*<Text style={[styles.monthTextStyle, monthTextStyle]}>
           {moment(date).format("ddd").toUpperCase()}
-        </Text>
+        </Text>*/}
       </View>
       <View style={styles.dividerStyle}>
         {!isLastMember && (
